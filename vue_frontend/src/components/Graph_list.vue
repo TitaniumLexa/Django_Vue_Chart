@@ -1,13 +1,13 @@
 <template>
     <div class="graph-list" v-if="itemlist">
-        <h2>You can select graph from list to show</h2>
+        <h2>You can select chart from list to show it below</h2>
         <table align="center">
             <tr v-for="item in itemlist" :key="item.id">
                 <td> 
                     <router-link :to="'/' + item.id + '/'" v-on:click.native="changeGraph">{{item.file}}</router-link> 
                 </td>
                 <td>
-                    uploaded: {{item.upload_date}}s    
+                    uploaded: {{item.upload_date}}    
                 </td>
             </tr>            
         </table>
@@ -50,7 +50,6 @@
                 .then((response) => {
                     this.itemlist = response.data
                     this.loaded = true
-                    console.log("Created")
                 });  
             }
         }

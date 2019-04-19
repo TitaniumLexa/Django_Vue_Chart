@@ -13,6 +13,10 @@
         components: {
             LineChart
         },
+        props:
+        {
+            id: 0
+        },
         data: function () {
             return {
                 loaded: false,
@@ -47,8 +51,8 @@
         },
         methods: {
             update: async function () {
-                console.log("updating")
-                await axios.get('http://127.0.0.1:8000/api/upload/').then((response) => {
+                console.log("updating" + this.id)
+                await axios.get('http://127.0.0.1:8000/api/upload/' + this.id + '/').then((response) => {
                     if (response.status == 204)
                         this.loaded = false
                     else {
@@ -63,9 +67,13 @@
                         }
                         this.loaded = true
                     }
-
                 });
-
+            },
+            graphId () {
+                if (this.$route.params.graphID != null)
+                    return this.$route.params.graphID
+                else
+                    return 0
             }
         }
     }

@@ -6,7 +6,8 @@
             <input type="file" name="file" required="" id="id_file" accept=".xls,.xlsx">
             <input type="submit" value="Upload">
         </form>
-        <line-chart-component ref="linechart"/>
+        <h2>Last uploaded excel graph</h2>
+        <line-chart-component id=0 ref="linechart"/>
     </div>
 
 </template>
@@ -24,7 +25,7 @@
             async handleSubmit(event) {
                 event.preventDefault()
                 let formData = new FormData(event.target)
-                await axios.post('http://localhost:8000/api/upload/', formData)
+                await axios.post('http://localhost:8000/api/upload/0/', formData)
                     .then((response) => (this.updateChart()))
 
             },

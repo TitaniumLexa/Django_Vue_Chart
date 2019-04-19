@@ -1,17 +1,19 @@
 <template>
     <div id="app">
         <upload-form/>
-
+        <graph-list />        
     </div>
 </template>
 
 <script>
     import UploadForm from './components/UploadForm.vue'
+    import GraphList from './components/Graph_list.vue'
 
     export default {
         name: 'app',
         components: {
-            UploadForm
+            UploadForm,
+            GraphList
         }
     }
 

@@ -1,5 +1,5 @@
 # vue_frontend
-
+Node.js - https://nodejs.org/en/download/
 ## Project setup
 ```
 npm install

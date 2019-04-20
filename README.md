@@ -1,5 +1,5 @@
 # Django_Vue_Chart
-Python - https://www.python.org/downloads/
+Python - https://www.python.org/downloads/  
 PostgreSQL - https://www.postgresql.org/download/
 ### Install dependencies:
 ```Python 

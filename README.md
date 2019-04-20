@@ -3,7 +3,7 @@ Python - https://www.python.org/downloads/
 
 ### Install dependencies:
 ```Python 
-pip install require.txt
+pip install -r require.txt
 ```
 
 ### Starting backend:

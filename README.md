@@ -1,4 +1,6 @@
 # Django_Vue_Chart
+Python - https://www.python.org/downloads/
+
 ### Install dependencies:
 ```Python 
 pip install require.txt

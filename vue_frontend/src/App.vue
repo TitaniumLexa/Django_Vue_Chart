@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <upload-form/>
-        <graph-list />        
+        <graph-list ref="chartlist"/>        
     </div>
 </template>
 
@@ -14,6 +14,12 @@
         components: {
             UploadForm,
             GraphList
+        },
+        methods: {
+            updateList: function()
+            {
+                this.$refs.chartlist.changeGraph()
+            }
         }
     }
 

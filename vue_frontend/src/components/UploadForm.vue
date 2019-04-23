@@ -30,6 +30,7 @@
             },
             updateChart: function () {
                 this.$refs.linechart.update()
+                this.$parent.updateList()              
             }
         }
     }
